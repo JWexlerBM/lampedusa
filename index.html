@@ -32,15 +32,7 @@
     iconUrl: 'https://finds.org.uk/assets/mapIcons/museumArcheological.png',
     iconSize: [32,37]
   });
-  L.geoJson(data,{
-    pointToLayer: function(feature,latlng){
-    var marker = L.marker(latlng,{icon: icon});
-    var html =feature.properties.description + '<br/>' + feature.properties.mint;
-    html += '<br/><img src="' + feature.properties.imageUrl + '" width="200" style="float-left">';
-    marker.bindPopup(html);
-    return marker;
-    }
-  }).addTo(map);
+
         
         
         var baseMaps = {
